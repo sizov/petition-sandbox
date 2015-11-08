@@ -2,18 +2,18 @@
 # Project Specific
 ######################
 /src/main/webapp/assets/styles/main.css
+/src/main/webapp/bower_components/
 /src/main/webapp/dist
 
 ######################
 # Node
 ######################
 /node/**
-/node_modules/**
+/node_modules/
 
 ######################
 # Bower
 ######################
-/src/main/webapp/bower_components/
 
 ######################
 # SASS
