@@ -1,0 +1,33 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "user",
+      "otherEntityName": "user",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "Login"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "petition",
+      "otherEntityName": "petition",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "Title"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "subscribtionDateTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "subscriber",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20151208211813",
+  "dto": "no",
+  "pagination": "no"
+}
