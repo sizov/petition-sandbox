@@ -1,0 +1,58 @@
+<div>
+    <h2>Subscriptionss</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="subscriptions.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new Subscriptions</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>SubscribtionDateTime</th>
+                    <th>Subscriber</th>
+                    <th>user</th>
+                    <th>petition</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="subscriptions in subscriptionss track by subscriptions.id">
+                    <td><a ui-sref="subscriptions.detail({id:subscriptions.id})">{{subscriptions.id}}</a></td>
+                    <td>{{subscriptions.subscribtionDateTime | date:'medium'}}</td>
+                    <td>{{subscriptions.subscriber}}</td>
+                    <td>
+                        {{subscriptions.user.Login}}
+                    </td>
+                    <td>
+                        <a ui-sref="petition.detail({id:subscriptions.petition.id})">{{subscriptions.petition.Title}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="subscriptions.detail({id:subscriptions.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="subscriptions.edit({id:subscriptions.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="subscriptions.delete({id:subscriptions.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
